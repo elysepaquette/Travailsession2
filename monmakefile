@@ -1,0 +1,6 @@
+bd_cours bd_liens bd_etudiants : Base_Donnees_Cours.csv Base_Donnees_Etudiants.csv Base_Donnees_Liens.csv bd_cours.csv bd_etudiants.csv bd_liens.csv data_cours_BM_CV_NB.csv data_liens_BM_CV_NB.csv data_etudiants_BM_CV_NB.csv Données_Cours_Anne-So_Daphné_Francois_Formulaire.csv Données_cours_Desjardins_Rioux_Roi_Aparicio.csv Données_Cours_GB_JCA_KM_EP.csv donnees_Cours_IB_CAD_EL_AR.csv Données_Etudiant_GB_JCA_KM_EP.csv Données_Étudiants_Anne-So_Daphné_Francois_Formulaire.csv Données_Étudiants_Desjardins_Rioux_Roi_Aparicio.csv donnees_Étudiants_IB_CAD_EL_AR.csv Données_Liens_Anne-So_Daphné_Francois_Formulaire.csv Données_Liens_Desjardins_Rioux_Roi_Aparicio.csv Données_Liens_GB_JCA_KM_EP.csv donnees_Liens_IB_CAD_EL_AR.csv
+	Rscript nettoyage_equipes_1-7.r
+tables: bd_cours.csv bd_liens.csv bd_etudiants
+	Rscript injections_données.R
+graph.region.pdf graph.reseau.pdf graph.reseau.classe.pdf graph.sexe.pdf : tables.db
+	Rscript figures__analyses.R
